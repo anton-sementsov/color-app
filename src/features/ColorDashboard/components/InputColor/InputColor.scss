@@ -1,0 +1,32 @@
+@import 'style/_variables.scss';
+
+.color-input {
+    padding: 4rem;
+    
+    &__button {
+        height: 30px;
+        min-width: 10rem;
+        margin-left: 70px;
+        background-color: $blue-default;
+        color: white;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &-wrapper {
+            padding-top: 17px;
+        }
+
+        &:hover {
+            background-color: $blue-darker;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content: flex-start;
+    }
+}

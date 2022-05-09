@@ -39,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "classnames": "^2.3.1",
+    "react-app-alias": "^2.2.0",
+    "sass": "^1.51.0"
   }
 }

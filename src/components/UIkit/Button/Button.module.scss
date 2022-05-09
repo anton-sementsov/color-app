@@ -1,0 +1,18 @@
+@import 'style/_variables.scss';
+
+.button {
+    padding: 0.2rem 0.5rem;
+    background-color: $blue-default;
+    color: $white-default;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    border: 1px solid $blue-darker;
+
+    &:hover {
+        background-color: $blue-darker;
+    }
+}
+
+.fullWidth {
+    width: 100%;
+}

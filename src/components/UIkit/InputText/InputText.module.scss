@@ -1,0 +1,19 @@
+@import '../../../style/_variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input {
+    max-width: 200px;
+}
+
+.error {
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    font-size: $text-sm;
+    color: $error;
+}

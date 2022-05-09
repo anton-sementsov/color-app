@@ -1,0 +1,47 @@
+import { FC } from 'react';
+import cn from 'classnames';
+
+import classes from './InputText.module.scss';
+
+interface InputProps {
+    label?: string,
+    id?: string,
+    error?: string,
+    nameInput?: string
+    value?: string
+    fullWidth?: boolean,
+    onChange: (e: React.FormEvent<HTMLInputElement>) => void
+}
+
+export const InputText: FC<InputProps> = ({
+    label,
+    id,
+    error,
+    nameInput,
+    value,
+    fullWidth,
+    ...restProps
+}) => {
+    const mainCn = cn(
+        classes.wrapper,
+        fullWidth && classes.fullWidth
+    );
+
+    return (
+        <div className={mainCn}>
+            {label && (
+                <label className={classes.label} htmlFor={id} >
+                    {label}
+                </label>
+            )}
+            <input
+                type='text'
+                className={classes.input}
+                name={nameInput}
+                value={value}
+                {...restProps}
+            />
+            {error && <div className={classes.error}>{error}</div>}
+        </div>
+    )
+};

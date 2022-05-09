@@ -1,0 +1,27 @@
+.color-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    max-width: 400px;
+
+    &__sample {
+        width: 30px;
+        height: 20px;
+    }
+
+    &__hex{
+        padding: 0 20px;
+    }
+    
+    &__remove {
+        margin-left: 20px;
+        color: #ffffff;
+        background-color: rgb(59, 137, 209);
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        &:hover {
+            background-color:rgb(28, 119, 204);
+        }
+    }
+}
