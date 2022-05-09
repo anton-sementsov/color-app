@@ -1,4 +1,4 @@
-import { ColorDashboard } from 'features/ColorDashboard/ColorDasboard';
+import { ColorDashboard } from 'features/ColorDashboard';
 
 function App() {
   return (
