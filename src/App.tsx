@@ -1,10 +1,8 @@
 import { ColorDashboard } from 'features/ColorDashboard';
 
-function App() {
+const App = () => {
   return (
-    <>
       <ColorDashboard />
-    </>
   );
 }
 

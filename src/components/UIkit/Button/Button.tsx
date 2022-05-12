@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from 'react';
-import cn from 'classnames';
+import { ReactNode } from 'react';
 
 import classes from './Button.module.scss';
 
@@ -7,7 +7,7 @@ interface BaseButtonProps {
     label: string;
     primary?: boolean;
     fullWidth?: boolean;
-    icon?: React.ReactNode;
+    icon?: ReactNode;
     size?: 'small' | 'medium' | 'large';
     variant?: 'primary';
     likeText?: boolean;
@@ -30,18 +30,12 @@ export const Button: FC<ButtonProps> = (props) => {
         ...restProps
     } = props;
 
-    const mainCn = cn(
-        classes.button,
-        classes[size],
-        classes[variant],
-        fullWidth && classes.fullWidth
-    );
-
     return (
         <button
-            className={
-                mainCn
-            }
+            data-size={size}
+            data-variant={variant}
+            data-full-width={fullWidth}
+            className={classes.button}
             disabled={disabled}
             {...restProps}
         >

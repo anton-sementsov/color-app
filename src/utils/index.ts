@@ -2,7 +2,7 @@ import { IColor } from 'features/ColorDashboard/types';
 
 export const storage = {
 
-  addObj: (key: string, value: object) => {
+  addObj: (key: string, value: IColor) => {
     if (!value) return;
     const data = JSON.parse(localStorage.getItem(key) || '[]');
     localStorage.setItem(key, JSON.stringify([...data, value]));

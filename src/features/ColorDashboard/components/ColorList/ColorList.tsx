@@ -14,9 +14,10 @@ export const ColorList: FC<ColorListProps> = ({ items, title, removeHandler }) =
         <>
             <h1>{title}</h1>
             {items.map((item, index) => {
+                const id = `${title.toLocaleLowerCase()}_${index}`
                 return (
                     <ColorItem
-                        key={index}
+                        id={id}
                         item={item}
                         removeHandler={removeHandler}
                     />

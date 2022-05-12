@@ -1,18 +1,29 @@
 @import 'style/_variables.scss';
 
 .button {
-    padding: 0.2rem 0.5rem;
-    background-color: $blue-default;
-    color: $white-default;
     cursor: pointer;
-    border-radius: 0.2rem;
-    border: 1px solid $blue-darker;
 
     &:hover {
         background-color: $blue-darker;
     }
-}
 
-.fullWidth {
-    width: 100%;
+    &[data-variant="primary"] {
+        border-radius: 0.2rem;
+        border: 1px solid $blue-darker;
+        padding: 0.2rem 0.5rem;
+        background-color: $blue-default;
+        color: $white-default;
+    }
+
+    &[data-size="small"] {
+        min-width: 6rem;
+    }
+    
+    &[data-size="medium"] {
+        min-width: 10rem;
+    }
+
+    &[data-full-width=true] {
+        width: 100%;
+    }
 }

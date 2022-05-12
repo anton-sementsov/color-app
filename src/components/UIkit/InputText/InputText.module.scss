@@ -17,3 +17,7 @@
     font-size: $text-sm;
     color: $error;
 }
+
+[data-full-width=true] {
+    width: 100%;
+}

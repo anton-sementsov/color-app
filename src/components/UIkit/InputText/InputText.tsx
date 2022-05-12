@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import cn from 'classnames';
 
 import classes from './InputText.module.scss';
 
@@ -22,13 +21,9 @@ export const InputText: FC<InputProps> = ({
     fullWidth,
     ...restProps
 }) => {
-    const mainCn = cn(
-        classes.wrapper,
-        fullWidth && classes.fullWidth
-    );
 
     return (
-        <div className={mainCn}>
+        <div data-full-width={fullWidth} className={classes.wrapper}>
             {label && (
                 <label className={classes.label} htmlFor={id} >
                     {label}

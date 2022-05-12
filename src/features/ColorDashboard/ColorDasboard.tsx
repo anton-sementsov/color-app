@@ -4,11 +4,9 @@ import { ColorContext } from 'features/ColorDashboard/hooks/useColors';
 
 export const ColorDashboard: FC = () => {
     return (
-        <>
-            <ColorContext>
-                <InputColor />
-                <Board />
-            </ColorContext>
-        </>
+        <ColorContext>
+            <InputColor />
+            <Board />
+        </ColorContext>
     )
 }
